@@ -63,12 +63,10 @@ const calcPayment = function() {
     const percent = +document.getElementById("percent").dataset.percent / 100 + 1
     const paymentEl = document.getElementById("payment")
 
-    console.log(sum, month, percent);
-
     const payment = beautyNum(Math.trunc(sum * percent / month))
 
     paymentEl.innerHTML = `${payment} ₽`
-}
+};
 
 const priceSliderEl = document.getElementById("price");
 const priceFrom = document.getElementById("priceFrom").dataset.price
