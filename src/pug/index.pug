@@ -14,7 +14,7 @@ include base/_head
                 .promo__percent
                     span 1,5
                     | %
-                a.promo__btn.btn(href="#") Оформить онлайн
+                a.promo__btn.btn(href="#form") Оформить онлайн
 
         .stats 
             .container
@@ -92,14 +92,14 @@ include base/_head
 
                         a.credit__btn.btn(href="#") Получить кредит
 
-        section.card.section 
+        section.card.section(id="form")
             .container 
                 h2.card__title.section__title Оформите карту онлайн
                 ul.card__list 
                     li.card__item(style="background-image:url(./img/card-step-1.svg)") Заполните онлайн-заявку. #[br] Это займет не больше 5 минут
                     li.card__item(style="background-image:url(./img/card-step-2.svg)") Через 2 минуты придет смс с&nbsp;решением
                     li.card__item(style="background-image:url(./img/card-step-3.svg)") Получите карту с бесплатной доставкой или в отделении
-                .card__form 
+                .card__form
                     p.card__text Форма заявки на кредитную карту
 
         section.proofes.section.section--dark 

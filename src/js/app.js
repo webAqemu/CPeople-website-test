@@ -6,6 +6,10 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 import nouislider from "nouislider";
 
+import SmoothScroll from "smooth-scroll";
+
+var scroll = new SmoothScroll('a[href*="#"]');
+
 const proofesSlider = new Swiper(".proofes__slider", {
     modules: [Navigation, Pagination],
     slidesPerView: "auto",
@@ -117,3 +121,12 @@ function setValue(value, id) {
     document.getElementById(id).innerHTML = value
 }
 
+const form = document.querySelector(".card__form")
+const btn = document.querySelector(".promo__btn")
+window.addEventListener("scroll", function(e) {
+    if(window.innerWidth < 767 && form.getBoundingClientRect().top < window.innerHeight && form.getBoundingClientRect().bottom + 450 > window.innerHeight) {
+        btn.classList.add("hiden")
+    } else {
+        btn.classList.remove("hiden")
+    }
+})
