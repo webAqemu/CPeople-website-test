@@ -105,7 +105,7 @@ body {
 }
 
 .mobile {
-  display: none !important;
+  display: none;
 }
 @media only screen and (max-width: 767px) {
   .mobile {
@@ -928,10 +928,15 @@ body {
   margin: 0 auto;
 }
 .proofes__pagination {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding-right: 16px;
+}
+@media only screen and (max-width: 767px) {
+  .proofes__pagination {
+    display: flex !important;
+  }
 }
 .proofes__pagination .swiper-pagination-bullet {
   border: 1px solid #808185;
