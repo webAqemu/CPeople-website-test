@@ -1,0 +1,82 @@
+@import fonts
+@import vars
+@import reset
+@import mixins
+
+*, 
+*::before,
+*::after
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    min-height: 0.001vw // — Fixes Safari bug with viewport units in calc()
+
+
+body
+    background-color: #fff
+    font-size: 16px
+    line-height: 1.2
+    font-family: "ALSHauss", Arial, Helvetica, sans-serif
+    font-weight: 400
+    color: $black
+
+
+.main
+    margin-bottom: 90px
+
+    @include r(767px)
+        margin-bottom: 60px
+
+.mobile
+    display: none
+
+    @include r(767px)
+        display: block
+
+.desktop
+    @include r(767px)
+        display: none !important
+
+
+.container
+    max-width: 1200px
+    width: 100%
+    padding: 0 30px
+    margin: 0 auto
+
+    @include r(767px)
+        padding: 0 16px
+
+    &--lg
+        max-width: 100%
+
+.btn
+    display: block
+    width: fit-content
+    padding: 18px 28px 15px
+    background-color: $yellow
+    border-radius: 10px
+    font-size: 18px
+    font-weight: 500
+
+.section
+    padding: 80px 0 90px
+
+    &--dark
+        background-color: #424548
+
+        .section__title
+            color: white
+
+    &__title
+        font-family: "Navigo", Arial, Helvetica, sans-serif
+        font-weight: 700
+        font-size: 48px
+        text-align: center
+
+        @include r(767px)
+            font-size: 30px
+        
+        &__white
+            color: white
+

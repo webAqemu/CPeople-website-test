@@ -1,0 +1,56 @@
+.footer
+    padding-bottom: 50px
+
+    @include r(767px)
+        padding-bottom: 25px
+
+    &__copy
+        border-top: 1px solid rgba(225, 225, 227, 0.9)
+        border-bottom: 1px solid rgba(225, 225, 227, 0.9)
+        padding: 25px 0
+        margin-bottom: 45px
+
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        @include r(1100px)
+            flex-direction: column
+            align-items: flex-start
+
+            p:first-child
+                margin-bottom: 20px
+
+    p
+        font-size: 13px
+        color: #55575C
+
+        
+
+    &__desc
+        height: 120px
+        overflow: auto
+        padding-right: 35px
+
+        p:not(:last-child)
+            margin-bottom: 15px
+
+        /* This will work on Firefox */
+        scrollbar-width: thin
+        scrollbar-color: black
+
+
+        /* Targtes on Chrome, Edge, and Safari */
+        &::-webkit-scrollbar 
+            width: 5px
+
+
+        &::-webkit-scrollbar-track 
+            background: rgba(225, 225, 227, 0.9)
+
+
+        &::-webkit-scrollbar-thumb 
+            background-color: $grey
+            border-radius: 20px
+            border: none

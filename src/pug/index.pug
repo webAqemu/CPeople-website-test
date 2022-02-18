@@ -1,0 +1,130 @@
+include base/_head
+    include blocks/_header
+    main.main
+        // blocks here
+        section.promo 
+            picture 
+                source(media="(max-width: 500px)", srcset="@img/promo-mobile.jpg")
+                img.promo__img(src="@img/promo.jpg", alt="promo background")
+            .container 
+                .promo__tag 
+                    span.desktop Бесплатное обслуживание
+                    span.mobile Обслуживание 0%
+                h1.promo__title Кредитная карта с кэшбэком
+                .promo__percent
+                    span 1,5
+                    | %
+                a.promo__btn.btn(href="#") Оформить онлайн
+
+        .stats 
+            .container
+                ul.stats__list
+                    li.stats__item 
+                        p.stats__title 
+                            span 1,5
+                            | %
+                        p.stats__text кэшбэк рублями
+                    li.stats__item 
+                        p.stats__title 
+                            span 0₽
+                            |
+                        p.stats__text обслуживание
+                    li.stats__item.desktop
+                        p.stats__title 
+                            | до 
+                            span 52 
+                            | дней
+                        p.stats__text без процентов
+                    li.stats__item 
+                        p.stats__title 
+                            | до
+                            span 600 
+                            | тыс. ₽
+                        p.stats__text.desktop кредитный лимит
+                        p.stats__text.mobile и 52 дня без %
+
+        section.cashback.section
+            .container 
+                h2.cashback__title.section__title Кэшбэк 1,5% без ограничений
+                ul.cashback__list 
+                    li.cashback__item 
+                        p.cashback__text Кэшбэк рублями
+                        img.cashback__img.cashback__img--center(src="@img/adv-1.png", alt="advantage icon")
+                    li.cashback__item 
+                        p.cashback__text За любые покупки
+                        img.cashback__img.cashback__img--top(src="@img/adv-2.png", alt="advantage icon")
+                    li.cashback__item 
+                        p.cashback__text Без лимитов и&nbsp;ограничений
+                        img.cashback__img.cashback__img--right(src="@img/adv-3.png", alt="advantage icon")
+        
+        section.credit.section 
+            .container
+                h2.credit__title.section__title.desktop Возьмите дополнительный кредит
+                h2.credit__title.section__title.mobile Дополнительный кредит на любые цели
+                p.credit__desc.desktop Кредит на любые цели. Получите решение за 2 минуты
+                p.credit__desc.mobile Получите решение за 2 минуты
+
+                .credit__inner  
+                    .credit__calc 
+                        .credit__row
+                            p.creadit__text Какая сумма нужна?
+                            p.credit__num(id="sum" data-sum="500000") 500 000 ₽
+                        .credit__slider(id="price")
+                        .credit__row 
+                            p.credit__text.credit__text--sm(id="priceFrom" data-price="90000") 90 000 ₽
+                            p.credit__text.credit__text--sm(id="priceTo" data-price="2000000") 2 000 000 ₽
+                        .credit__row
+                            p.creadit__text На какой срок?
+                            p.credit__num(id="month" data-month="36") 36 мес.
+                        .credit__slider(id="date")
+                        .credit__row 
+                            p.credit__text.credit__text--sm(id="monthFrom" data-price="13") 13 мес.
+                            p.credit__text.credit__text--sm(id="monthTo" data-price="60") 60 мес.
+
+                        p.credit__text.credit__text--sm.credit__text--warn Расчет платежа приведен с учетом финансовой защиты. Не является офертой.
+        
+                    .credit__result 
+                        .credit__num.credit__num--black(id="percent" data-percent="10.99") 10,99 %
+                        p.credit__text ваша ставка
+
+                        .credit__num.credit__num--black(id="payment" data-payment="14265") 14 265 ₽
+                        p.credit__text ежемесячный платёж
+
+                        a.credit__btn.btn(href="#") Получить кредит
+
+        section.card.section 
+            .container 
+                h2.card__title.section__title Оформите карту онлайн
+                ul.card__list 
+                    li.card__item(style="background-image:url(./img/card-step-1.svg)") Заполните онлайн-заявку. #[br] Это займет не больше 5 минут
+                    li.card__item(style="background-image:url(./img/card-step-2.svg)") Через 2 минуты придет смс с&nbsp;решением
+                    li.card__item(style="background-image:url(./img/card-step-3.svg)") Получите карту с бесплатной доставкой или в отделении
+                .card__form 
+                    p.card__text Форма заявки на кредитную карту
+
+        section.proofes.section.section--dark 
+            .container 
+                h2.proofes__title.section__title Удобный мобильный&nbsp;банк
+                p.proofes__desc Пользуйтесь услугами онлайн без визита в отделение
+                .proofes__slider
+                    .swiper-wrapper
+                        .proofes__slide 
+                            img(src="@img/slide-1.png", alt="phone screenshot")
+                        .proofes__slide 
+                            img(src="@img/slide-2.png", alt="phone screenshot")
+                        .proofes__slide 
+                            img(src="@img/slide-3.png", alt="phone screenshot")
+                        .proofes__slide 
+                            img(src="@img/slide-4.png", alt="phone screenshot")
+                        .proofes__slide 
+                            img(src="@img/slide-1.png", alt="phone screenshot")
+                        .proofes__slide 
+                            img(src="@img/slide-2.png", alt="phone screenshot") 
+                    button.proofes__arrow.proofes__arrow--prev 
+                    button.proofes__arrow.proofes__arrow--next 
+                    .proofes__pagination.mobile
+
+                a.proofes__btn.btn(href="#").desktop Оформить карту онлайн
+    
+    include blocks/_footer
+    script(src="js/app.min.js") 

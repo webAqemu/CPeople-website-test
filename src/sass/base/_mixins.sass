@@ -1,0 +1,41 @@
+@mixin r($width)
+    @media only screen and (max-width: $width)
+        @content
+
+@mixin rh($height)
+    @media only screen and (max-height: $height)
+        @content
+        
+@mixin xl
+    @media (min-width: 1600px)
+        @content
+
+@mixin lg
+    @media (min-width: 1300px) and (max-width: 1599px)
+        @content
+
+@mixin md
+    @media (min-width: 1000px) and (max-width: 1299px)
+        @content
+
+@mixin sm
+    @media (min-width: 700px) and (max-width: 999px)
+        @content
+
+@mixin xs
+    @media (max-width: 699px)
+        @content
+
+
+@mixin font-face($font-name,$font-file,$font-weight)
+    @font-face
+        font-family: '#{$font-name}'
+        font-display: swap
+        src: url('../fonts/#{$font-file}.woff2') format('woff2'), url('../fonts/#{$font-file}.woff') format('woff')
+        font-weight: #{$font-weight}
+
+@mixin icon($icon-name)
+    background-image: url("../images/sprites/main.stack.svg#image-#{$icon-name}")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
